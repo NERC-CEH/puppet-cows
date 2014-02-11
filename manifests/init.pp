@@ -16,17 +16,17 @@
 
 class cows ()
   {
-	  class { 'python':
-	    pip         => true,
-	    dev         => true,
-	    virtualenv  => true,
-	  }
-	
+    class { 'python':
+      pip         => true,
+      dev         => true,
+      virtualenv  => true,
+    }
+  
     class { 'imaging':}
 
     # Make sure Python is install before running any packages
     # that require the pip provider!
-	  Class['python'] -> Package<| provider == 'pip' |>    
+    Class['python'] -> Package<| provider == 'pip' |>    
 
     # Download servers
     $servers        = {
