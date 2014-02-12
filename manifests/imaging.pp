@@ -1,4 +1,4 @@
-# == Class: imaging
+# == Class: cows::imaging
 #
 # A class to obtain the packages required to install Python
 # imaging library, Pillow and install it.
@@ -8,7 +8,7 @@
 # Mike Wilson - mw@ceh.ac.uk
 #
 
-class imaging (
+class cows::imaging (
   $version  = '1.7.8'
 ) {
     # Pillow dependencies based on info supplied by
@@ -50,6 +50,6 @@ class imaging (
       require   => Package[$pillow],
     }
 
-    Class['::python'] -> Class['imaging']
+    Class['::python'] -> Class['cows::imaging']
 
 }
