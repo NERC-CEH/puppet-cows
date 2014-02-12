@@ -22,7 +22,7 @@ class cows ()
       virtualenv  => true,
     }
   
-    class { 'imaging':}
+    class { 'cows::imaging':}
 
     # Make sure Python is install before running any packages
     # that require the pip provider!
