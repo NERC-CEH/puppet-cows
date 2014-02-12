@@ -19,7 +19,8 @@ git clone git://github.com/NERC-CEH/puppet-cows.git cows
 
 ## Limitations
 
-This module has been tested on CentOS 6.x
+This module has been tested on CentOS 6.x, it requries the EPEL repos be available
+on the target server.
 
 ## Contributors
 
